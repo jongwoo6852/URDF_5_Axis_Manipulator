@@ -4,4 +4,4 @@
 --> roslaunch moveit_setup_assistant setup_assistant.launch
 
 2) Manipulator demo 확인(rviz에서 실행)
---> roslaunch <file name> <package name> demo.launch
+--> roslaunch<package_file_name> demo.launch
