@@ -1,0 +1,26 @@
+digraph G {
+node [shape=box];
+"world" [label="world"];
+"base_link" [label="base_link"];
+"link_1" [label="link_1"];
+"link_2" [label="link_2"];
+"link_3" [label="link_3"];
+"link_4" [label="link_4"];
+"link_5" [label="link_5"];
+"link_6" [label="link_6"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"world" -> "fixed" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"fixed" -> "base_link"
+"base_link" -> "Joint1" [label="xyz: 0 0.135 0 \nrpy: 0 -0 0"]
+"Joint1" -> "link_1"
+"link_1" -> "Joint2" [label="xyz: 0 0 -0.33 \nrpy: 0 -0 0"]
+"Joint2" -> "link_2"
+"link_2" -> "Joint_3" [label="xyz: 0 0.04 0 \nrpy: 0 -0 0"]
+"Joint_3" -> "link_3"
+"link_3" -> "Joint_4" [label="xyz: 0 0.10175 0 \nrpy: 0 -0 0"]
+"Joint_4" -> "link_4"
+"link_4" -> "Joint_5" [label="xyz: 0 0.04825 0 \nrpy: 0 -0 0"]
+"Joint_5" -> "link_5"
+"link_5" -> "Joint_6" [label="xyz: 0 0 -0.1 \nrpy: 0 -0 0"]
+"Joint_6" -> "link_6"
+}
