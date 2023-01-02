@@ -1,0 +1,9 @@
+<launch>
+
+<rosparam file="$(find manipulator0102_description)/launch/controller.yaml" command="load"/>
+<node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen" ns="manipulator0102" args="Rev1_position_controller Rev6_position_controller Rev8_position_controller Rev9_position_controller Rev10_position_controller joint_state_controller "/>
+<node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="false" output="screen">
+  <remap from="/joint_states" to="/manipulator0102/joint_states"/>
+</node>
+
+</launch>
